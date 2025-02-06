@@ -25,7 +25,7 @@ phases:
   post_build:
     on-failure: ABORT
     commands:
-      - docker images ls -al
+      - docker images
       - docker push $REPOSITORY/$IMAGE:$IMAGE_TAG
       - echo 'post_build'
 
